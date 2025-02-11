@@ -5,7 +5,7 @@ Library    SeleniumLibrary
 ${URL}      https://automationexercise.com
 ${BROWSER}  Chrome
 ${EMAIL}    your_email@example.com
-${PASSWORD} your_password
+${PASSWORD}  your_password
 
 *** Test Cases ***
 Test Login
