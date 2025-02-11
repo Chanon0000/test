@@ -1,81 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.13.2 on win32)" generated="2025-02-11T10:29:17.419574" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2 (Python 3.13.2 on win32)" generated="2025-02-11T10:51:05.398800" rpa="false" schemaversion="5">
 <suite id="s1" name="Test Login" source="D:\66022534_2\test_login.robot">
 <test id="s1-t1" name="Test Login" line="11">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-02-11T10:29:17.599002" level="INFO">Opening browser 'Chrome' to base url 'https://automationexercise.com'.</msg>
+<msg time="2025-02-11T10:51:05.573862" level="INFO">Opening browser 'Chrome' to base url 'https://automationexercise.com'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-02-11T10:29:17.598811" elapsed="4.288922"/>
+<status status="PASS" start="2025-02-11T10:51:05.573674" elapsed="4.447620"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-02-11T10:29:21.888106" elapsed="0.033949"/>
+<status status="PASS" start="2025-02-11T10:51:10.021661" elapsed="0.029663"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//a[@href='/login']</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-11T10:29:21.923122" elapsed="0.030925"/>
+<status status="PASS" start="2025-02-11T10:51:10.051654" elapsed="0.021213"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-11T10:29:21.954624" level="INFO">Clicking element '//a[@href='/login']'.</msg>
+<msg time="2025-02-11T10:51:10.073429" level="INFO">Clicking element '//a[@href='/login']'.</msg>
 <arg>//a[@href='/login']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-11T10:29:21.954447" elapsed="0.794055"/>
+<status status="PASS" start="2025-02-11T10:51:10.073211" elapsed="1.203858"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//h2[contains(text(),'Login to your account')]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-02-11T10:29:22.748902" elapsed="0.020370"/>
+<status status="PASS" start="2025-02-11T10:51:11.277405" elapsed="0.015571"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-11T10:29:22.769891" level="INFO">Typing text 'your_email@example.com' into text field '//input[@name='email']'.</msg>
+<msg time="2025-02-11T10:51:11.293384" level="INFO">Typing text 'your_email@example.com' into text field '//input[@name='email']'.</msg>
 <arg>//input[@name='email']</arg>
 <arg>${EMAIL}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-11T10:29:22.769649" elapsed="0.173893"/>
+<status status="PASS" start="2025-02-11T10:51:11.293211" elapsed="0.089651"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-02-11T10:29:22.945011" level="FAIL">Variable '${PASSWORD}' not found.</msg>
+<msg time="2025-02-11T10:51:11.383893" level="INFO">Typing text 'your_password' into text field '//input[@name='password']'.</msg>
 <arg>//input[@name='password']</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="FAIL" start="2025-02-11T10:29:22.944358" elapsed="0.000705">Variable '${PASSWORD}' not found.</status>
+<status status="PASS" start="2025-02-11T10:51:11.383280" elapsed="0.077442"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:51:11.461200" level="INFO">Clicking button '//button[@type='submit']'.</msg>
 <arg>//button[@type='submit']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-02-11T10:29:22.945295" elapsed="0.000027"/>
+<status status="PASS" start="2025-02-11T10:51:11.461037" elapsed="1.227009"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>//b[contains(text(),'Logged in as')]</arg>
+<msg time="2025-02-11T10:51:32.993298" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-11T10:51:32.993460" level="FAIL">Element '//span[contains(text(),'Hello,')]' not visible after 20 seconds.</msg>
+<arg>//span[contains(text(),'Hello,')]</arg>
+<arg>20s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2025-02-11T10:29:22.945432" elapsed="0.000022"/>
+<status status="FAIL" start="2025-02-11T10:51:12.688440" elapsed="20.306549">Element '//span[contains(text(),'Hello,')]' not visible after 20 seconds.</status>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<arg>Logged in as</arg>
+<arg>Hello,</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="NOT RUN" start="2025-02-11T10:29:22.945617" elapsed="0.000021"/>
+<status status="NOT RUN" start="2025-02-11T10:51:32.995840" elapsed="0.000056"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>//a[@href='/delete_account']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-02-11T10:29:22.945736" elapsed="0.000019"/>
+<status status="NOT RUN" start="2025-02-11T10:51:32.996163" elapsed="0.000038"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//h2[contains(text(),'ACCOUNT DELETED!')]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2025-02-11T10:29:22.945848" elapsed="0.000019"/>
+<status status="NOT RUN" start="2025-02-11T10:51:32.996545" elapsed="0.000025"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
 <arg>ACCOUNT DELETED!</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="NOT RUN" start="2025-02-11T10:29:22.945964" elapsed="0.000019"/>
+<status status="NOT RUN" start="2025-02-11T10:51:32.996776" elapsed="0.000024"/>
 </kw>
-<status status="FAIL" start="2025-02-11T10:29:17.598105" elapsed="5.348117">Variable '${PASSWORD}' not found.</status>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-02-11T10:51:32.996991" elapsed="0.000024"/>
+</kw>
+<status status="FAIL" start="2025-02-11T10:51:05.572921" elapsed="27.424382">Element '//span[contains(text(),'Hello,')]' not visible after 20 seconds.</status>
 </test>
-<status status="FAIL" start="2025-02-11T10:29:17.420694" elapsed="5.526801"/>
+<status status="FAIL" start="2025-02-11T10:51:05.399984" elapsed="27.598842"/>
 </suite>
 <statistics>
 <total>
@@ -88,6 +96,5 @@
 </suite>
 </statistics>
 <errors>
-<msg time="2025-02-11T10:29:17.420842" level="ERROR">Error in file 'D:\66022534_2\test_login.robot' on line 8: Setting variable '${PASSWORD} your_password' failed: Invalid variable name '${PASSWORD} your_password'.</msg>
 </errors>
 </robot>
