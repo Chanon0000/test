@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.2 on win32)" generated="2025-02-11T10:29:17.419574" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Login" source="D:\66022534_2\test_login.robot">
+<test id="s1-t1" name="Test Login" line="11">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:29:17.599002" level="INFO">Opening browser 'Chrome' to base url 'https://automationexercise.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-11T10:29:17.598811" elapsed="4.288922"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-11T10:29:21.888106" elapsed="0.033949"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//a[@href='/login']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-11T10:29:21.923122" elapsed="0.030925"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:29:21.954624" level="INFO">Clicking element '//a[@href='/login']'.</msg>
+<arg>//a[@href='/login']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T10:29:21.954447" elapsed="0.794055"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//h2[contains(text(),'Login to your account')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-11T10:29:22.748902" elapsed="0.020370"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:29:22.769891" level="INFO">Typing text 'your_email@example.com' into text field '//input[@name='email']'.</msg>
+<arg>//input[@name='email']</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T10:29:22.769649" elapsed="0.173893"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:29:22.945011" level="FAIL">Variable '${PASSWORD}' not found.</msg>
+<arg>//input[@name='password']</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2025-02-11T10:29:22.944358" elapsed="0.000705">Variable '${PASSWORD}' not found.</status>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-11T10:29:22.945295" elapsed="0.000027"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//b[contains(text(),'Logged in as')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-02-11T10:29:22.945432" elapsed="0.000022"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Logged in as</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-02-11T10:29:22.945617" elapsed="0.000021"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//a[@href='/delete_account']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-11T10:29:22.945736" elapsed="0.000019"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//h2[contains(text(),'ACCOUNT DELETED!')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-02-11T10:29:22.945848" elapsed="0.000019"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>ACCOUNT DELETED!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-02-11T10:29:22.945964" elapsed="0.000019"/>
+</kw>
+<status status="FAIL" start="2025-02-11T10:29:17.598105" elapsed="5.348117">Variable '${PASSWORD}' not found.</status>
+</test>
+<status status="FAIL" start="2025-02-11T10:29:17.420694" elapsed="5.526801"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test Login" id="s1" pass="0" fail="1" skip="0">Test Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-02-11T10:29:17.420842" level="ERROR">Error in file 'D:\66022534_2\test_login.robot' on line 8: Setting variable '${PASSWORD} your_password' failed: Invalid variable name '${PASSWORD} your_password'.</msg>
+</errors>
+</robot>
