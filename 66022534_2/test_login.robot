@@ -17,9 +17,9 @@ Test Login
     Input Text    //input[@name='email']    ${EMAIL}
     Input Text    //input[@name='password']    ${PASSWORD}
     Click Button    //button[@type='submit']
-    Wait Until Element Is Visible    //b[contains(text(),'Logged in as')]
+    Wait Until Page Contains    Logged in as    15s  # ใช้ตรวจสอบข้อความที่ปรากฏบนหน้าเว็บ
     Page Should Contain    Logged in as
     Click Element    //a[@href='/delete_account']
-    Wait Until Element Is Visible    //h2[contains(text(),'ACCOUNT DELETED!')]
+    Wait Until Element Is Visible    //h2[contains(text(),'ACCOUNT DELETED!')]    
     Page Should Contain    ACCOUNT DELETED!
     Close Browser
